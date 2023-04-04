@@ -1,0 +1,85 @@
+:root{
+    --blanco: #FFFFFF;
+    --negro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+
+    --fuente-principal: 3.8rem; /*1rem = 10px*/
+}
+
+html{
+    font-size: 62.5%; /*Con este codigo es mas facil trabajar con rem*/
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px; /*Con este codigo es mas facil trabajar con rem*/
+    font-family: 'Krub', sans-serif;
+}
+
+.titulo {
+    text-align: center;
+    font-size: var(--fuente-principal);
+}
+
+.titulo span{
+    font-size: 2rem;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal{    
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 480px) {
+    .navegacion-principal{
+        flex-direction: row;        
+        justify-content: space-around;
+    }
+}
+
+.navegacion-principal a{
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--negro);
+}
+
+.hero{
+    background-image: url(../img/paisaje.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+}
+
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+
+}
+
